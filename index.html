@@ -14,22 +14,27 @@
     <div class="container">
 
         <h1>Description</h1>
-        You should see some coloured buttons and a working accordion.
+        <p>In this example I override the original background images of the accordion component. The goal is to no longer rely on &quot;data:image&quot; from the original bootstrap component references because they are being blocked by a CSP directive. As an example, I replaced the original arrow icons (which used data:image) with plus and minus icons.</p>
+
+        <p>Sequence of steps:</p>
+
+        <ol>
+            <li>Include bootstrap (via download or CDN). I downloaded the official version - https://github.com/twbs/bootstrap/releases/download/v5.3.2/bootstrap-5.3.2-dist.zip (from https://getbootstrap.com/docs/5.3/ getting-started/download/)</li>
+            <li>
+                Download the svg icons you want to replace:
+                <ol>
+                    <li>- Go to https://icons.getbootstrap.com/</li>
+                    <li>- Select the desired icon, go to the &quot;Copy HTML&quot; section, and save this code as an svg file in your project</li>
+                </ol>
+            </li>
+            <li>Create a custom css file (such as bootstrap.override.css)</li>
+            <li>Include this file in your project, after the line where you referenced the original bootstrap file.</li>
+            <li>Make the necessary overridings according to your needs. In this example I replaced icons from the accordion component as an example.</li>
+        </ol>
+
 
         <hr />
-        <h2>Some coloured buttons</h2>
-
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
-
-        <hr />
-        <h2>An accordion</h2>
+        <h2>Accordion example</h2>
 
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
