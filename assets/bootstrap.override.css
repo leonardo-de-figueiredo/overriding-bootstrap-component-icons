@@ -1,0 +1,8 @@
+.accordion-button::after {
+    background-image: url(
+        "../assets/icons/minus.svg")
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url( 
+        "../assets/icons/plus.svg")
+}
